@@ -1,0 +1,363 @@
+@import "../../../root.css";
+
+/* Styles de base pour NavPC */
+.CaleNavPC {
+  width: 100%;
+  height: 83.5px;
+}
+
+.NavPC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  box-shadow: var(--box-shadow);
+}
+@media (max-width: 767.99px) {
+  .NavPC {
+    display: none;
+  }
+}
+
+.ContainerLogNavPC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.NamePageNavPC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  position: fixed;
+  top: 40px; /* A revoir */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 7;
+}
+
+.NamePageNavPC > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--h2);
+  color: var(--textcolor);
+}
+@media (min-width: 768px) and (max-width: 875px) {
+  .NamePageNavPC > h1 {
+    font-size: var(--h2);
+  }
+}
+@media (min-width: 875px) and (max-width: 1500px) {
+  .NamePageNavPC > h1 {
+    font-size: var(--h1);
+  }
+}
+@media (min-width: 1500px) {
+  .NamePageNavPC > h1 {
+    font-size: var(--h1);
+  }
+}
+
+.LogoNavPC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.LinkLogoNavPC > a {
+  width: 80px;
+  height: 80px;
+}
+
+.LogoNavPC > a > img {
+  width: 80px;
+  height: 80px;
+}
+
+/*--------------------------------------------------*/
+/* Logique des Ul, Li, et a de la NavPC */
+
+.MenuUlPC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.MenuLiPC {
+  list-style: none;
+  margin: 1em;
+  transition: transform 0.3s ease-in-out;
+}
+.MenuLinkPC:hover {
+  color: #15616d;
+}
+
+/* Animation avec rotation gauche-droite-gauche et grossissement */
+@keyframes rotateAndScale {
+  0% {
+    transform: scale(1.1); /* Position initiale */
+  }
+  25% {
+    transform: scale(1.0); /* Rotation gauche avec grossissement */
+  }
+  50% {
+    transform: scale(1.1); /* Rotation droite avec grossissement */
+  }
+  75% {
+    transform: scale(1.0); /* Retour à gauche avec grossissement */
+  }
+  100% {
+    transform: scale(1.1); /* Retour à la position initiale sans grossissement */
+  }
+}
+
+.MenuLinkPC {
+  text-decoration: none;
+  color: var(--textcolor);
+  font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 875px) {
+  .MenuLinkPC {
+    font-size: var(--h5);
+  }
+}
+@media (min-width: 875px) and (max-width: 1500px) {
+  .MenuLinkPC {
+    font-size: var(--h4);
+  }
+}
+@media (min-width: 1500px) {
+  .MenuLinkPC {
+    font-size: var(--h3);
+  }
+}
+
+/*--------------------------------------------------*/
+/* Sous Menu Nous*/
+
+.SousNavLiPC {
+  position: relative;
+}
+
+.SousNavLiPC:hover .SousMenuUlPC {
+  display: block;
+}
+
+.SousNavSpanPC {
+  font-size: var(--h5);
+  color: var(--textcolor);
+  font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 875px) {
+  .SousNavSpanPC {
+    font-size: var(--h5);
+  }
+}
+@media (min-width: 875px) and (max-width: 1500px) {
+  .SousNavSpanPC {
+    font-size: var(--h4);
+  }
+}
+@media (min-width: 1500px) {
+  .SousNavSpanPC {
+    font-size: var(--h3);
+  }
+}
+.SousNavSpanPC:hover {
+  color: #15616d;
+}
+.SousMenuUlPC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  padding: 10px 0px 10px 5px;
+  background-color: var(--light);
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.SousMenuLiPC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px 0px 3px 0px;
+  padding: 0.2rem;
+}
+
+.SousMenuLinkPC {
+  text-decoration: none;
+  display: block;
+  font-size: var(--h5);
+  color: var(--textcolor);
+  font-weight: bolt;
+  width: 120px;
+}
+@media (min-width: 768px) and (max-width: 875px) {
+  .SousMenuLinkPC {
+    font-size: var(--h5);
+  }
+}
+@media (min-width: 875px) and (max-width: 1500px) {
+  .SousMenuLinkPC {
+    font-size: var(--h4);
+  }
+}
+@media (min-width: 1500px) {
+  .SousMenuLinkPC {
+    font-size: var(--h3);
+  }
+}
+
+/*--------------------------------------------------*/
+/* Sous Menu Compte*/
+
+.CompteMenu {
+  position: relative;
+  list-style: none;
+}
+
+.SousMenuWrapper {
+  position: absolute;
+  top: 5px;
+  right: -20px;
+  display: none;
+}
+
+.CompteMenu:hover .SousMenuWrapper,
+.SousMenuWrapper:hover {
+  display: block;
+}
+
+.CompteMenu .SousMenuUlPC {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem;
+}
+
+.CompteMenu .SousMenuLiPC {
+  margin: 0.2rem 0;
+}
+
+.CompteMenu .AuthButton {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-weight: bold;
+}
+
+.login {
+  color: #029a07;
+}
+
+.login:hover {
+  color: #06700b;
+}
+
+.logout {
+  color: #f01000;
+}
+
+.logout:hover {
+  color: #880c03;
+}
+
+/*Logique pour Road-Addict logo svg */
+/* Taille par défaut pour les écrans larges */
+.logoSvg {
+  height: 50%; /* Taille par défaut */
+  margin-top: 20px;
+  width: auto; /* Garder les proportions */
+}
+
+/* Taille réduite pour les petits écrans */
+@media screen and (max-width: 480px) {
+  .logoSvg {
+    height: 30px; /* Taille réduite pour les petits écrans */
+  }
+}
+
+/*-----------------------------------------------*/
+/* Styles pour les logos animés */
+
+/* Conteneur pour les logos */
+.logoContainer {
+  position: relative;
+  width: 80px; /* Ajustez selon vos besoins */
+  height: 80px;
+}
+
+/* Styles pour le logo extérieur */
+.exterieurImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  width: 80px; /* Ajustez selon vos besoins */
+  height: 80px;
+  animation: rotateZoom 1.5s forwards ease-out;
+}
+
+/* Styles pour le logo RA */
+.raImg {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  width: 60px; /* Ajustez selon vos besoins */
+  height: 60px;
+  animation: zoomIn 1.5s 0.5s forwards ease-out;
+}
+
+/* Animation pour le logo extérieur */
+@keyframes rotateZoom {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Animation pour le logo RA */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "points": [
+    {
+      "id": 1,
+      "name": "Tour Eiffel",
+      "coordinates": { "lat": 48.8584, "lng": 2.2945 }
+    },
+    {
+      "id": 2,
+      "name": "Louvre",
+      "coordinates": { "lat": 48.8606, "lng": 2.3376 }
+    }
+  ]
+}

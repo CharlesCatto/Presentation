@@ -1,0 +1,291 @@
+@import "../../../root.css";
+
+/* Styles de base pour NavMobile */
+.NavMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 768.02px) {
+    display: none;
+  }
+}
+
+.ContainerNavMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  box-shadow: var(--box-shadow);
+}
+
+.LogoNavMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.LogoNavMobile > a {
+  width: 80px;
+  height: 80px;
+}
+
+.LogoNavMobile > a > img {
+  width: 80px;
+  height: 80px;
+}
+
+.NamePageNavMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  position: fixed;
+  top: 40px; /* A revoir */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 7;
+}
+
+.NamePageNavMobile > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--h2);
+  color: var(--textcolor);
+}
+@media (min-width: 0px) and (max-width: 350px) {
+  .NamePageNavMobile > h1 {
+    font-size: var(--h3);
+  }
+}
+@media (min-width: 350px) and (max-width: 768px) {
+  .NamePageNavMobile > h1 {
+    font-size: var(--h2);
+  }
+}
+
+/*-----------------------------------------------*/
+/*Menu Burger*/
+
+/*Position du Menu Burger*/
+.sideNav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: -250px;
+  background-color: var(--BackgroudMenuBurger);
+  transition: right 0.5s ease;
+}
+
+.sideNav.active {
+  right: 0;
+  box-shadow: var(--box-shadow);
+}
+
+/*-----------------------------------------------*/
+/*Logique de fermeture du MenuBurger par la div*/
+
+.subSideNav {
+  all: unset;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: -100vw;
+  background-color: inherit;
+}
+
+.subSideNav.active {
+  left: 0;
+}
+
+/*-----------------------------------------------*/
+/*Logique ouverture et fermeture MenuBurger*/
+.openBtn {
+  position: fixed;
+  z-index: 9;
+  top: 0.7rem;
+  right: 1rem;
+  background-color: var(--noColor);
+  cursor: pointer;
+}
+
+.menuBurger > span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: var(--textColorWhite);
+  margin: 0.5rem 0rem;
+}
+
+.closeBtn,
+.openBtn {
+  outline: none; /* Supprime le contour au clic */
+  border: none; /* Supprime les bordures */
+}
+
+/*Suppression des contours buttons*/
+.closeBtn:focus,
+.openBtn:focus {
+  outline: none; /* Supprime le contour au focus */
+  box-shadow: none; /* Supprime tout effet de surbrillance au focus */
+}
+
+.closeBtnLog1:hover,
+.openBtn:hover,
+.closeBtnLog2 {
+  outline: none; /* Supprime le contour au survol */
+  box-shadow: none; /* Supprime tout effet de surbrillance au survol */
+}
+
+/*Container du bouton close MenuBurger*/
+.logCloseBtn {
+  display: flex;
+  justify-content: start;
+  width: 250px;
+  padding: 0rem 0rem 3rem 0rem;
+}
+
+/*Logique 1*/
+.closeBtnLog1 {
+  margin: 1rem 0rem 0rem 1rem;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Dégradé bleu-violet */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.closeBtnLog1:hover {
+  transform: rotate(90deg) scale(1.1); /* Légère rotation et agrandissement */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Ombre renforcée */
+  background: linear-gradient(135deg, #3498db, #2980b9); /* Dégradé de couleur */
+}
+
+/*Logique 2, 3 et 4*/
+.closeBtnLog2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem 0rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.closeBtnLog2:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.ImgCloseBtn {
+  width: 60px;
+  height: 60px;
+}
+/*-----------------------------------------------*/
+/*Boutons langage drapeaux*/
+
+.sideNav > section {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+/*Logique pour Road-Addict logo svg */
+/* Taille par défaut pour les écrans larges */
+.logoSvg {
+  margin-top: 20px;
+  height: 50%; /* Taille par défaut */
+  width: auto; /* Garder les proportions */
+}
+
+/* Taille réduite pour les petits écrans */
+@media screen and (max-width: 480px) {
+  .logoSvg {
+    height: 400px;
+    /* width: 25%; */
+  }
+}
+
+/*-----------------------------------------------*/
+/* Styles pour les logos animés */
+
+/* Conteneur pour les logos */
+.logoContainer {
+  position: relative;
+  width: 80px; /* Ajustez selon vos besoins */
+  height: 80px;
+}
+
+/* Styles pour le logo extérieur */
+.exterieurImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  width: 80px; /* Ajustez selon vos besoins */
+  height: 80px;
+  animation: rotateZoom 1.5s forwards ease-out;
+}
+
+/* Styles pour le logo RA */
+.raImg {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  width: 60px; /* Ajustez selon vos besoins */
+  height: 60px;
+  animation: zoomIn 1.5s 0.5s forwards ease-out;
+}
+
+/* Animation pour le logo extérieur */
+@keyframes rotateZoom {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Animation pour le logo RA */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fond circulaire pour le pneu -->
+  <circle cx="100" cy="100" r="90" fill="#333" stroke="#000" stroke-width="4" />
+
+  <!-- Bande de roulement extérieure -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#555" stroke-width="6" stroke-dasharray="10,10" />
+
+  <!-- Motif de la bande de roulement intérieure -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#777" stroke-width="4" stroke-dasharray="5,15" />
+
+  <!-- Reflets sur le pneu pour un effet luxe -->
+  <ellipse cx="70" cy="70" rx="60" ry="10" fill="rgba(255,255,255,0.2)" />
+  <ellipse cx="130" cy="130" rx="40" ry="7" fill="rgba(255,255,255,0.1)" />
+
+  <!-- Noyau central (jante) -->
+  <circle cx="100" cy="100" r="40" fill="#222" stroke="#444" stroke-width="3" />
+
+  <!-- Détails de la jante (branches) -->
+  <line x1="100" y1="100" x2="140" y2="100" stroke="#666" stroke-width="4" />
+  <line x1="100" y1="100" x2="120" y2="140" stroke="#666" stroke-width="4" />
+  <line x1="100" y1="100" x2="80" y2="140" stroke="#666" stroke-width="4" />
+  <line x1="100" y1="100" x2="60" y2="100" stroke="#666" stroke-width="4" />
+  <line x1="100" y1="100" x2="80" y2="60" stroke="#666" stroke-width="4" />
+  <line x1="100" y1="100" x2="120" y2="60" stroke="#666" stroke-width="4" />
+</svg>

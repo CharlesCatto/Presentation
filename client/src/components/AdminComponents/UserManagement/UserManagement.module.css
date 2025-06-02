@@ -1,0 +1,171 @@
+.userManagementContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1em;
+  margin-top: 2em;
+  background-color: var(--light);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.603) 0px 4px 6px;
+}
+
+.searchContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-height: 2.5rem;
+  align-items: center;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expandButton {
+  padding: 7px 10px 5px 10px;
+  background-color: var(--dark);
+  color: var(--light);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.eventCounter {
+  font-weight: bold;
+}
+
+.searchBar {
+  width: 40%;
+}
+
+.sortButton,
+.resetButton {
+  margin: 5px;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.expandButton:hover,
+.smallButton:hover,
+.largeButton:hover,
+.sortButton:hover,
+.resetButton:hover {
+  background-color: var(--tertiary-color);
+}
+
+.tableContainer {
+  border: solid;
+  border-collapse: collapse;
+  border-radius: 5px;
+  font-size: 10px;
+
+  @media screen and (min-width: 550px) {
+    font-size: 18px;
+  }
+}
+
+.tableContainer button {
+  margin: 5px;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--dark);
+  color: var(--light);
+
+  @media screen and (min-width: 550px) {
+    font-size: 18px;
+  }
+}
+
+.tableContainer button:hover {
+  background-color: var(--tertiary-color);
+}
+
+tbody tr {
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(206, 219, 219);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.modalButtons {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  min-height: 2.2em;
+}
+
+.largeButton {
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.smallButton {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.previewImage {
+  max-width: 20vh;
+  max-height: 20vh;
+}

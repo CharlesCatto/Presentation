@@ -1,0 +1,434 @@
+.outerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.innerContainer {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 17px 17px 34px #566762, -17px -17px 34px #d0d7d4;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.searchBar {
+  position: absolute;
+  top: 0%;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 600px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.iconsContainer {
+  position: absolute;
+  top: 31%;
+  left: 3.5%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.5em;
+  z-index: 1000;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Button */
+
+.customButton {
+  position: absolute;
+  top: 3.5%;
+  right: 3.5%;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 1000;
+}
+
+.customButton:hover {
+  transform: scale(1.1);
+}
+
+/* Modal logic not finished ?? */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.deleteButton {
+  padding: 10px 20px;
+  border: none;
+  color: var(--light);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.deleteButton:hover {
+  opacity: 0.8;
+}
+.cancel {
+  background-color: var(--secondary-color);
+}
+.cancel:hover {
+  background-color: var(--dark);
+}
+
+.image {
+  width: 3em;
+  height: 3em;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.smallPlaceholder {
+  width: 50%;
+  height: 100px;
+  background-color: var(--secondary-color);
+  margin: 1rem auto 0;
+  border-radius: 10px;
+}
+
+.images {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+/* /DATE */
+
+.durationToggle {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.durationToggle label {
+  margin-right: 10px;
+}
+
+.dateRangePicker {
+  display: flex;
+  gap: 10px;
+}
+
+.modalInput {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.icon.active {
+  background-color: lightgray; /* Highlight active icons */
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.datePickerContainer {
+  position: absolute;
+  top: 3.5%;
+  left: 60%; /* Adjust this value to position the date picker */
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.datePicker {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* enjoy this */
+.searchBar {
+  position: absolute;
+  top: 3.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.searchButton {
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.searchBar {
+  position: absolute;
+  top: 3.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.searchButton {
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.leaflet-popup-content {
+  margin: 13px 19px;
+  line-height: 1.4;
+}
+
+.popupContent {
+  background-color: var(--light);
+  color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popupContent h4 {
+  margin: 0 0 10px;
+  font-size: var(--h4);
+  color: var(--primary-color);
+}
+
+.popupContent p {
+  margin: 0;
+  font-size: var(--p);
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.dropdown {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+.search {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.searchButton {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: black;
+}
+
+/* Styles pour mobile */
+@media screen and (max-width: 768px) {
+  .searchBar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .dropdown,
+  .search,
+  .searchButton {
+    width: 90%;
+  }
+  .dropdown {
+    margin-top: 10px;
+  }
+  .searchButton {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+.icon.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Styles pour mobile */
+@media screen and (max-width: 768px) {
+  .iconsContainer {
+    flex-wrap: wrap;
+  }
+
+  .icon {
+    font-size: 18px;
+    padding: 8px;
+  }
+}

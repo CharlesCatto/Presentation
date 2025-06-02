@@ -1,0 +1,10 @@
+@import "./root.css";
+
+/* Font Import */
+/* @import url(''); */
+
+.pages {
+  color: #316685;
+  text-align: center;
+  font-size: calc(1.5rem + 2vw);
+}

@@ -1,0 +1,82 @@
+@import "../../root.css";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+  background: var(--light);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark);
+  margin-bottom: 1em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 768px) {
+  .image {
+    max-width: 300px;
+  }
+}
+
+.text {
+  font-size: var(--h4);
+  color: var(--dark);
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .text {
+    max-width: 600px;
+  }
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.gridImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gridImage:hover {
+  transform: scale(1.05);
+}
+
+.ppp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

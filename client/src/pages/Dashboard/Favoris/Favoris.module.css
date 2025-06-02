@@ -1,0 +1,155 @@
+.container {
+  background-color: var(--light);
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 2em;
+  overflow: hidden;
+  margin-bottom: 500px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.searchBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input {
+  flex: 1 1 calc(100% - 16px);
+  margin-right: 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dropdown {
+  flex: 1 1 calc(50% - 8px);
+  margin-right: 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchButton {
+  flex: 1 1 auto;
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  color: var(--light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.searchButton:onclick {
+  background-color: var(--tertiary-color);
+}
+
+.deleteButton {
+  flex: 1 1 100%;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: var(--fourthly-color);
+  color: var(--light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:disabled {
+  background-color: #78290f3d;
+  cursor: not-allowed;
+}
+
+.advertItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  flex: 1;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.arrowButton {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d61bf3;
+}
+
+/* Ajustement du client */
+
+.stickyHeader {
+  background-color: var(--light);
+  padding: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.favoriteList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.advertCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.picture {
+  width: 80px;
+  height: 80px;
+  background-color: green;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.vehicleDetails {
+  flex-grow: 1;
+}
+
+.checkbox {
+  position: absolute;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

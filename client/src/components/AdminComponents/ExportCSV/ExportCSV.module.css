@@ -1,0 +1,22 @@
+.buttonCSV {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px 5px 10px;
+  background-color: var(--dark);
+  color: var(--light);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttonCSV:hover {
+  background-color: var(--tertiary-color);
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+}
+
+.text {
+  font-weight: bold;
+}

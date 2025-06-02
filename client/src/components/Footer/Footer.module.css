@@ -1,0 +1,43 @@
+.sectionFooter {
+  border-radius: 10%;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--light);
+  color: var(--dark);
+  text-align: center;
+  padding-bottom: 1em;
+  font-family: "Georgia", serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+}
+
+.containerIcon {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1em;
+}
+
+.socialIcon {
+  margin-top: 2em;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.socialIcon:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+.creators {
+  margin-top: 1em;
+  font-size: 0.9rem;
+  color: var(--dark);
+}

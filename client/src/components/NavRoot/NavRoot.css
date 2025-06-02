@@ -1,0 +1,13 @@
+.headerRoot {
+  width: 100%;
+}
+.headerRoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo {
+  height: 50px;
+  margin: 10px 0;
+}
